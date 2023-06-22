@@ -1,0 +1,90 @@
+.todoItemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+
+  max-width: 100%;
+  height: 72px;
+
+  background: var(--gray-500);
+
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+
+  .checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: var(--gray-500);
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background: var(--gray-400);
+      border: 2px solid var(--blue);
+    }
+
+    &:checked::before { 
+      display: flex;
+      content: '\2714';
+      color: var(--gray-100);
+      font-size: 0.75rem;
+      justify-content: center;
+    }
+
+    &:checked {
+      background: var(--purple);
+      border: 2px solid var(--purple);
+    }
+
+    &:checked:hover {
+      background: var(--purple);
+      border: 2px solid var(--purple);
+      filter: brightness(110%);
+    }
+
+    &:checked + .todoTitle {
+      text-decoration: line-through var(--gray-300) 1px;
+      color: var(--gray-300);
+    }
+
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    width: 90%;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--gray-400);
+      
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:hover {
+        filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+      }
+    }
+  }
+
+
+}

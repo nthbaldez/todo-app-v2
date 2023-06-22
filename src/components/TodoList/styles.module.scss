@@ -1,0 +1,40 @@
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 0.75rem;
+  margin-top: 64px;
+
+  .headerContainerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 736px;
+    height: 19px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 1.56rem;
+
+    span {
+      border-radius: 999px;
+      padding: 2px 8px;
+      background-color: var(--gray-400);
+    }
+
+    .tasksCreated {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--blue);
+    }
+
+    .tasksDone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--purple);
+    }
+  }
+}

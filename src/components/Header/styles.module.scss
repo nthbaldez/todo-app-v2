@@ -1,0 +1,15 @@
+.headerContainer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: var(--gray-700);
+  
+  h1 {
+    color: var(--blue);
+    span {
+      color: var(--purple);
+    }
+  }
+}

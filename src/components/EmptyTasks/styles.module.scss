@@ -1,0 +1,16 @@
+.emptyTasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 24px;
+  gap: 16px;
+
+  width: 736px;
+  height: 244px;
+
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+
+  color: var(--gray-300);
+}
