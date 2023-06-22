@@ -13,6 +13,7 @@ interface TodoProps {
 
 
 export default function MainContainer() {
+  const [ todos, setTodos ] = useState<TodoProps[]>([]);
   const [titleTodo, setTitleTodo] = useState('');
   const deferredTitle = useDeferredValue(titleTodo);
 
@@ -22,15 +23,12 @@ export default function MainContainer() {
     title: deferredTitle
   }
 
-  const [ todos, setTodos ] = useState<TodoProps[]>([]);
-
   function createNewTask() {
 
     if (deferredTitle === '') {
       alert('Preencha o campo');
       return;
     }
-    
     setTodos([...todos, newTodo]);
     setTitleTodo('');
   }
@@ -38,7 +36,7 @@ export default function MainContainer() {
   function handleTaskCompleted(id: string, completed: boolean) {
     const updatedCompleteTasks = todos.map(todo => {
       if (todo.id === id) {
-          todo.completed = !completed;
+        todo.completed = !completed;
       }
       return todo;
     });
